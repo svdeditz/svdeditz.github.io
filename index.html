@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVD Editz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: "Poppins", sans-serif; }
+    @keyframes gradientX {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient-x {
+      background-size: 400% 400%;
+      animation: gradientX 12s ease infinite;
+    }
+    a:focus { outline: 2px solid rgba(255,255,255,0.06); outline-offset: 2px; }
+    @media (max-width: 640px) { h1 { font-size: 28px; } }
+  </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+  <!-- Decorative animated background -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#2b0000] via-[#8b0000] to-black opacity-85 animate-gradient-x"></div>
+  </div>
+
+  <!-- Sticky NAV -->
+  <nav class="fixed top-4 left-0 right-0 z-40 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto flex items-center justify-between bg-black/40 backdrop-blur-md rounded-2xl p-3 shadow-lg">
+    <!-- Left Logo + Tagline -->
+    <div class="flex items-center gap-4">
+      <a href="#home" class="text-red-400 font-extrabold text-lg tracking-wide hover:opacity-90">SVD Editz</a>
+      <div class="text-sm text-gray-300 hidden md:block">Turning Ideas Into Stunning Visuals</div>
+    </div>
+
+    <!-- Right Menu + WhatsApp -->
+    <div class="flex items-center gap-3">
+      <a href="#services" class="text-sm text-gray-200 hover:text-white">Services</a>
+      <a href="#portfolio" class="text-sm text-gray-200 hover:text-white">Portfolio</a>
+      <a href="#contact" class="text-sm text-gray-200 hover:text-white">Contact</a>
+
+      <!-- ✅ Advanced WhatsApp Button -->
+      <a href="https://wa.me/919877886902?text=Hi%20SVD%20Editz!%20I'm%20interested%20in%20your%20services." 
+         target="_blank" 
+         class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold shadow-md bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all">
+        
+        <!-- WhatsApp Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.91 11.91 0 0 0 12 .04 11.94 11.94 0 0 0 .05 12c0 2.11.55 4.16 1.6 5.96L0 24l6.2-1.63A11.93 11.93 0 0 0 12 23.95c6.62 0 12-5.38 12-11.95 0-3.2-1.24-6.2-3.48-8.52zM12 21.3a9.3 9.3 0 0 1-4.74-1.3l-.34-.2-3.67.97.98-3.58-.22-.36A9.26 9.26 0 0 1 2.7 12c0-5.12 4.17-9.28 9.3-9.28 2.48 0 4.8.96 6.55 2.7a9.27 9.27 0 0 1 2.73 6.57c0 5.12-4.18 9.3-9.3 9.3zm5.1-6.97c-.28-.14-1.65-.81-1.9-.9-.26-.1-.44-.14-.62.14-.18.27-.72.9-.88 1.08-.16.18-.33.2-.62.07-.29-.14-1.23-.45-2.35-1.44-.87-.78-1.45-1.73-1.62-2.02-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.2.05-.36-.02-.5-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47l-.53-.01c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.26s.97 2.62 1.1 2.8c.14.18 1.9 3.02 4.6 4.23.64.28 1.14.45 1.53.58.64.2 1.22.17 1.68.1.51-.07 1.65-.67 1.89-1.32.23-.64.23-1.19.16-1.32-.07-.13-.25-.2-.53-.34z"/>
+        </svg>
+
+        <!-- Text -->
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- HERO -->
+    <section id="home" class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+            SVD Editz
+            <span class="block text-red-400 mt-2 text-2xl md:text-3xl font-semibold">Turning Ideas Into Stunning Visuals</span>
+          </h1>
+          <p class="mt-6 text-gray-200 max-w-xl">
+            Modern, creative, and professional video editing services — from full YouTube edits to viral shorts and brand collaborations.
+          </p>
+          <div class="mt-8 flex gap-4">
+            <a href="#services" class="px-6 py-3 rounded-lg bg-red-600 hover:bg-red-700 font-semibold">🔴 Get Editing Services</a>
+            <a href="#contact" class="px-6 py-3 rounded-lg border border-gray-700 hover:border-white">⚡ Contact Me</a>
+          </div>
+          <div class="mt-8 flex gap-4 items-center">
+            <div class="text-sm text-gray-400">Available for:</div>
+            <div class="flex gap-2">
+              <span class="px-3 py-1 bg-white/5 rounded">YouTube</span>
+              <span class="px-3 py-1 bg-white/5 rounded">Brands</span>
+              <span class="px-3 py-1 bg-white/5 rounded">Gaming</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div>
+
+
+
+
+
+            
+            <iframe width="450" height="450" src="https://www.youtube.com/embed/Hl1Mw_jaAjU" title="Frontman Face Reveal ☠️☠️ #shorts #trending #squidgame #edit #viral #kdrama #netflix #frontman" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="absolute top-4 left-4 bg-black/50 px-3 py-1 rounded-md text-xs">Latest on YT</div>
+        </div>
+      </div>
+    </section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-6 md:px-12 py-16 text-center">
+  <h2 class="text-4xl font-bold mb-6">About <span class="text-red-500">SVD Editz</span></h2>
+
+  <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
+    At <span class="font-semibold text-white">SVD Editz</span>, we bring creativity and precision together to craft
+    professional edits that stand out. Whether it’s 
+    <span class="text-red-400 font-semibold">YouTube content</span>, 
+    <span class="text-red-400 font-semibold">shorts & reels</span>, or 
+    <span class="text-red-400 font-semibold">brand collaborations</span> — our mission is to make your content look
+    impactful and engaging.
+  </p>
+
+  <!-- Success Highlight -->
+  <div class="bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl shadow-2xl px-10 py-8 inline-block">
+    <h3 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">
+      🎉 Done Successfully <span class="text-yellow-300">500+ Paid Orders</span>
+    </h3>
+    <p class="text-gray-100 mt-3 text-lg">
+      Trusted by creators, influencers, and brands worldwide 🚀
+    </p>
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="max-w-7xl mx-auto px-6 md:px-12 py-12 text-center">
+  <h2 class="text-3xl font-bold text-white mb-8">Services</h2>
+  <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+    <div class="bg-white/5 rounded-2xl p-6 border border-white/5">
+      <h3 class="font-semibold">Paid Editz Making</h3>
+      <p class="text-sm text-gray-300">Polished edits for creators & businesses. Starting From $7 or ₹600 </p>
+    </div>
+    <div class="bg-white/5 rounded-2xl p-6 border border-white/5">
+      <h3 class="font-semibold">YouTube Edits</h3>
+      <p class="text-sm text-gray-300">Full-length edits, jump cuts, color grading. Starting From $15 or ₹1300</p>
+    </div>
+    <div class="bg-white/5 rounded-2xl p-6 border border-white/5">
+      <h3 class="font-semibold">Shorts/Reels/TikTok</h3>
+      <p class="text-sm text-gray-300">Hook-driven edits optimized for shares. Starting From $7 or ₹600</p>
+    </div>
+    <div class="bg-white/5 rounded-2xl p-6 border border-white/5">
+      <h3 class="font-semibold">Gaming Montages</h3>
+      <p class="text-sm text-gray-300">Cinematic montages, synced music. Starting From $10 or ₹850</p>
+    </div>
+  </div>
+
+  <!-- Request Service Form -->
+  <div class="w-full max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-red-500 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
+      Request a Service
+    </h1>
+
+    <p class="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+      Fill out this form to request <span class="text-red-400 font-semibold">Paid Edits</span>, 
+      <span class="text-red-400 font-semibold">YouTube Collaborations</span>, 
+      <span class="text-red-400 font-semibold">Brand Partnerships</span>, or other services.  
+    </p>
+
+    <div class="bg-gray-800/70 backdrop-blur-lg rounded-2xl shadow-2xl p-4 border border-gray-700">
+      <iframe 
+        src="https://forms.gle/DGQ1CeydZ4uni2bz9" 
+        width="100%" 
+        height="600" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        class="rounded-xl">
+        Loading…
+      </iframe>
+    </div>
+
+    <div class="mt-6">
+      <a href="https://forms.gle/DGQ1CeydZ4uni2bz9" target="_blank"
+         class="inline-block px-6 py-3 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition-transform">
+        Open Form in New Tab
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  document.getElementById("serviceForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = Object.fromEntries(new FormData(this));
+
+    const response = await fetch("http://localhost:5000/api/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      document.getElementById("formSuccess").classList.remove("hidden");
+      this.reset();
+    } else {
+      alert("❌ Something went wrong, please try again.");
+    }
+  });
+</script>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="max-w-7xl mx-auto px-6 md:px-12 py-16 text-center">
+  <h2 class="text-4xl font-bold mb-10">Portfolio</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    
+     <!-- Video1 -->
+
+   <div class="relative w-full" style="padding-top: 177.78%;"> <!-- 16/9 flipped -->
+  <iframe class="absolute top-0 left-0 w-full h-full rounded-xl"
+    src="https://www.youtube.com/embed/Hl1Mw_jaAjU"
+    title="Frontman Face Reveal - Short"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div class="relative w-full" style="padding-top: 177.78%;"> <!-- 16/9 flipped -->
+  <iframe class="absolute top-0 left-0 w-full h-full rounded-xl"
+    src="https://www.youtube.com/embed/K6HydZwa8LY"
+    title="Nam Gyu Screaming 🤣🤣 #shorts #trending #viral #squidgame #edit #namgyu #netflix"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div class="relative w-full" style="padding-top: 177.78%;"> <!-- 16/9 flipped -->
+  <iframe class="absolute top-0 left-0 w-full h-full rounded-xl"
+    src="https://www.youtube.com/embed/w9fU-YS-Ni4"
+    title="Frontman Face Reveal - Short"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+
+</div>
+  </div>
+</section>
+
+
+<!-- VISIT MY CHANNEL SECTION -->
+<section id="youtube" class="max-w-7xl mx-auto px-6 md:px-12 py-16 text-center">
+  <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 bg-gradient-to-r from-red-500 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
+    Visit My Channel
+  </h2>
+
+  <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+    Check out my latest videos, shorts, and creative edits on YouTube!  
+    Don’t forget to <span class="text-red-400 font-semibold">subscribe</span> for updates.
+  </p>
+
+  <a href="http://www.youtube.com/@SVDEditz0456" target="_blank"
+     class="inline-block px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-transform hover:shadow-2xl">
+    🔴 Visit My Channel
+  </a>
+</section>
+
+
+<!-- FAQ SECTION -->
+<section id="faq" class="max-w-7xl mx-auto px-6 md:px-12 py-12">
+  <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-6 text-center bg-gradient-to-r from-red-500 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
+    Frequently Asked Questions (FAQ)
+  </h2>
+  <div class="space-y-3">
+    
+    <!-- FAQ Item 1 -->
+    <div class="bg-white/5 rounded-2xl p-3 border border-white/10 shadow-md hover:shadow-lg transition-shadow">
+      <button class="w-full text-left flex justify-between items-center faq-btn font-semibold text-gray-200 hover:text-red-400 transition-colors text-sm md:text-base">
+        How long does a typical edit take?
+        <span class="transform transition-transform duration-300">+</span>
+      </button>
+      <div class="faq-content mt-1 hidden text-gray-300 text-xs md:text-sm">
+        Most edits take 2-5 days depending on length and complexity. Rush orders may be available.
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="bg-white/5 rounded-2xl p-3 border border-white/10 shadow-md hover:shadow-lg transition-shadow">
+      <button class="w-full text-left flex justify-between items-center faq-btn font-semibold text-gray-200 hover:text-red-400 transition-colors text-sm md:text-base">
+        What file formats do you accept?
+        <span class="transform transition-transform duration-300">+</span>
+      </button>
+      <div class="faq-content mt-1 hidden text-gray-300 text-xs md:text-sm">
+        We accept MP4, MOV, and other common video formats. Contact us if you have a unique format.
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="bg-white/5 rounded-2xl p-3 border border-white/10 shadow-md hover:shadow-lg transition-shadow">
+      <button class="w-full text-left flex justify-between items-center faq-btn font-semibold text-gray-200 hover:text-red-400 transition-colors text-sm md:text-base">
+        Can I request revisions?
+        <span class="transform transition-transform duration-300">+</span>
+      </button>
+      <div class="faq-content mt-1 hidden text-gray-300 text-xs md:text-sm">
+        Yes! Each service includes 1-2 revisions. Additional revisions may incur extra cost.
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="bg-white/5 rounded-2xl p-3 border border-white/10 shadow-md hover:shadow-lg transition-shadow">
+      <button class="w-full text-left flex justify-between items-center faq-btn font-semibold text-gray-200 hover:text-red-400 transition-colors text-sm md:text-base">
+        How can I collaborate with SVD Editz?
+        <span class="transform transition-transform duration-300">+</span>
+      </button>
+      <div class="faq-content mt-1 hidden text-gray-300 text-xs md:text-sm">
+        You can reach out via WhatsApp or email for YouTube collabs, brand deals, or creative projects.
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="bg-white/5 rounded-2xl p-3 border border-white/10 shadow-md hover:shadow-lg transition-shadow">
+      <button class="w-full text-left flex justify-between items-center faq-btn font-semibold text-gray-200 hover:text-red-400 transition-colors text-sm md:text-base">
+        Do you offer rush orders?
+        <span class="transform transition-transform duration-300">+</span>
+      </button>
+      <div class="faq-content mt-1 hidden text-gray-300 text-xs md:text-sm">
+        Yes! Rush orders are available for an additional fee. Contact us directly to arrange.
+      </div>
+    </div>
+
+    <!-- FAQ Item 6 -->
+    <div class="bg-white/5 rounded-2xl p-3 border border-white/10 shadow-md hover:shadow-lg transition-shadow">
+      <button class="w-full text-left flex justify-between items-center faq-btn font-semibold text-gray-200 hover:text-red-400 transition-colors text-sm md:text-base">
+        What is the best way to reach you quickly?
+        <span class="transform transition-transform duration-300">+</span>
+      </button>
+      <div class="faq-content mt-1 hidden text-gray-300 text-xs md:text-sm">
+        WhatsApp is the fastest way to get a response. Click the contact link to message us instantly.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // FAQ toggle script
+  const faqButtons = document.querySelectorAll(".faq-btn");
+  faqButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      content.classList.toggle("hidden");
+
+      const icon = button.querySelector("span");
+      icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+    });
+  });
+</script>
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto px-6 md:px-12 py-16 text-center">
+  <h2 class="text-4xl font-bold mb-10">Contact</h2>
+  
+  <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+    
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919877886902" target="_blank" 
+       class="flex items-center gap-4 bg-green-600 hover:bg-green-700 px-8 py-5 rounded-2xl shadow-xl transition-transform hover:scale-110 text-lg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+           alt="WhatsApp" class="w-10 h-10">
+      <span class="font-semibold">Chat on WhatsApp</span>
+    </a>
+
+    <!-- Gmail -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=svdeditz456@gmail.com&su=Service%20Request&body=Hello%20SVD%20Editz," 
+       target="_blank"
+       class="flex items-center gap-4 bg-white text-black hover:bg-gray-200 px-8 py-5 rounded-2xl shadow-xl transition-transform hover:scale-110 text-lg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" 
+           alt="Gmail" class="w-10 h-10">
+      <span class="font-semibold">Send Email</span>
+    </a>
+    
+  </div>
+</section>
+
+<!-- FOOTER WITH COPYRIGHT & DISCLAIMER -->
+<footer class="mt-12 py-8 border-t border-white/5 text-center text-gray-300">
+  <p>© 2025 SVD Editz. All Rights Reserved.</p>
+  <p class="mt-2 text-sm text-gray-400">
+    Disclaimer: All videos, music, images, and graphics used in the videos are the property of their respective copyright owners. This channel does not claim any ownership over them. The content is used only for entertainment, review, and transformative purposes.
+  </p>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919877886902" target="_blank" class="fixed right-6 bottom-6 z-50 bg-green-500 p-4 rounded-full shadow-2xl hover:scale-105 transition-transform" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M21.7 4.3a11 11 0 10-15.6 15.6L3 21l1.1-3.9A11 11 0 0021.7 4.3z" stroke="#fff" stroke-width="1.2"/>
+      <path d="M17 14.5c-.3.8-1.8 1.6-2.6 1.7-.7.1-1.3.1-2-.1-.8-.2-1.7-.6-2.5-1.2-.9-.7-2-1.7-2.2-2.8-.2-1.1.2-2.2.9-3 .7-.8 1.8-1.3 2.9-1.4 1-.1 2 .1 2.9.5.5.2 1 .5 1.4.8.4.3.7.6.9 1" stroke="#fff" stroke-width="1.2"/>
+    </svg>
+  </a>
+
+
+</body>
+</html>
